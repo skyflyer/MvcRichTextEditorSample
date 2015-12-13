@@ -1,0 +1,13 @@
+﻿@model Redactor.Models.NewsItem
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div>
+    <h2>@Model.Title</h2>
+    <span class="date">@Model.PublishedDate.ToShortDateString()</span>
+</div>
+
+@Html.Raw(Model.Content)
+
