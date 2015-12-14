@@ -33,6 +33,13 @@ A rich text editor example to integrate with MVC projects. It uses Redactor JS (
     routes.MapRoute("RedactorUpload", "redactor/upload", new { controller = "Redactor", action = "Upload" });
     routes.MapRoute("RedactorResource", "redactor/get/{filename}", new { controller = "Redactor", action = "Get" });
     ```
+1. Modify `web.config` in order to handler requests for Redactor images:
+
+    ```
+    <system.webServer>
+        <modules runAllManagedModulesForAllRequests="true" />
+    </system.webServer>
+    ```
 
 # Future ideas
 
